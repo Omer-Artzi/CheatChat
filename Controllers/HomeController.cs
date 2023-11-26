@@ -7,14 +7,17 @@ namespace CheatChat.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly DatabaseHelper databaseHelper;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, DatabaseHelper databaseHelper)
     {
         _logger = logger;
+        this.databaseHelper = databaseHelper;
     }
 
     public IActionResult Index()
     {
+        //return GetAndPrintFirstEntry();
         return View();
     }
 
@@ -27,6 +30,33 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+   
+
+    // POST: Home/ProcessPhoneNumber
+    [HttpPost]
+    public ActionResult logIn(string email,string password)
+    {
+        //Check if user exists
+        UserModel? logInUser = databaseHelper.logIn(email, password);
+        if(logInUser is null)
+        {
+            return RedirectToAction("errorNoSuchUser");
+        }    
+
+
+        // Redirect to a Chats page.
+        return RedirectToAction("Chats");
+    }
+
+    // GET: Home/ThankYou
+    public ActionResult Chats()
+    {
+        return View();
+    }
+    public ActionResult errorNoSuchUser()
+    {
+        return View();
     }
 }
 

@@ -1,24 +1,44 @@
 ﻿<Properties StartupConfiguration="{EC79670E-62A5-4547-8470-6FDCE47C11B1}|https">
   <MonoDevelop.Ide.ItemProperties.CheatChat PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/ErrorViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Program.cs" />
-      <File FileName="Controllers/HomeController.cs" />
-      <File FileName="Models/ErrorViewModel.cs" Line="10" Column="1" />
+      <File FileName="Program.cs" Line="30" Column="1" />
+      <File FileName="Controllers/HomeController.cs" Line="55" Column="22" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Controllers/SignUpController.cs" Line="14" Column="17" />
+      <File FileName="Controllers/LogInController.cs" Line="7" Column="1" />
+      <File FileName="Controllers/ChatController.cs" />
+      <File FileName="Controllers/SettingController.cs" Line="14" Column="17" />
+      <File FileName="Models/UserModel.cs" Line="10" Column="17" />
+      <File FileName="Models/ChatModel.cs" Line="1" Column="1" />
+      <File FileName="Models/MessageModel.cs" Line="12" Column="1" />
+      <File FileName="Properties/launchSettings.json" Line="43" Column="6" />
+      <File FileName="DataBaseHelper.cs" Line="33" Column="73" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="app.config" Line="7" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/EmptyHtmlFile.html" Line="1" Column="1" />
+      <File FileName="Views/Home/ErrorNoSuchUser.html" Line="12" Column="18" />
+      <File FileName="Views/Home/CSS/errorNoSuchUser.css" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CheatChat" expanded="True">
-            <Node name="CheatChat" expanded="True">
+          <Node name="CheatChat">
+            <Node name="CheatChat" selected="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="ErrorViewModel.cs" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views">
+                <Node name="Home" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -29,5 +49,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

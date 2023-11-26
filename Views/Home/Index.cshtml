@@ -1,9 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null; // This example assumes no layout for simplicity.
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CheatChat - Log In</title>
+    <link rel="stylesheet" href="~/css/LogIn.css">
+</head>
+<body>
+    <div class="container">
+        <img src="~/images/CheatChatLogo.png" alt="Logo" class="logo">
+        @using (Html.BeginForm("logIn", "Home", FormMethod.Post))
+        {
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required />
+            <br />
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required />
+            <br />
+            <input type="submit" value="Log In" style="font-size: 20px" />
+        }
+    </div>
+</body>
+</html>
