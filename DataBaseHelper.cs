@@ -13,10 +13,10 @@ public class DatabaseHelper
 
     public MySqlConnection GetConnection()
     {
-        string server = /*configuration["mysqlConnection:server"]*/"localhost";
-        string database = /*configuration["mysqlConnection:database"]*/"CheatChat";
-        string user = /*configuration["mysqlConnection:user"]*/"root";
-        string password = /*configuration["mysqlConnection:password"]*/"admin123";
+        string server = configuration["mysqlConnection:server"];
+        string database = configuration["mysqlConnection:database"];
+        string user = configuration["mysqlConnection:user"];
+        string password = configuration["mysqlConnection:password"];
 
         string connectionString = $"Server={server};Database={database};User Id={user};Password={password};";
 
@@ -29,14 +29,14 @@ public class DatabaseHelper
         using (MySqlConnection connection = GetConnection())
         {
             connection.Open();
-
+            //TODO prevent SQL injection
             string query = $"SELECT * FROM Users WHERE Email = '{email}'";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             {
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read() && reader is not null)
+                    if (reader.Read())
                     {
                         if (!password.Equals(reader["password"]))
                         {
@@ -44,12 +44,14 @@ public class DatabaseHelper
                         }
                         UserModel result = new UserModel
                         {
+                        
                             phone_number = reader["phone_number"].ToString(),
-                            first_name   = reader["first_name"].ToString(),
-                            last_name    = reader["last_name"].ToString(),
-                            email        = reader["email"].ToString(),
+                            first_name = reader["first_name"].ToString(),
+                            last_name = reader["last_name"].ToString(),
+                            email = reader["email"].ToString(),
+                                
 
-                            // Map other properties as needed
+                           
                         };
                         return result;
                     }

@@ -11,3 +11,6 @@ app.config
 obj/Debug/net7.0/CheatChat.assets.cache
 obj/Debug/net7.0/CheatChat.csproj.AssemblyReference.cache
 obj/Debug/net7.0/CheatChat.GeneratedMSBuildEditorConfig.editorconfig
+*.dll
+*.pdb
+*.props
