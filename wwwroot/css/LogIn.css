@@ -1,10 +1,13 @@
 ﻿body {
+    margin:0;
+    padding:0;
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
     background-image: url("/images/LogInBackground.jpg");
+    justify-content: center;
+    align-items: center;
     background-size: cover;
-    position: absolute
+    display: flex;
 
-    
 }
 
     h2 {
