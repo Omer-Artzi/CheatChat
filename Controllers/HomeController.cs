@@ -26,7 +26,7 @@ public class HomeController : Controller
     }
    
 
-    // POST: Home/ProcessPhoneNumber
+    // POST: Home/LogIn
     [HttpPost]
     public ActionResult logIn(string email,string password)
     {
@@ -52,4 +52,5 @@ public class HomeController : Controller
         return View();
     }
 }
+
 
