@@ -38,7 +38,7 @@
         "server": "localhost:3306",
         "database": "CheatChat",
         "user": "root",
-        "password": "admin123"
+        "password": "123456"
       }
     }
   }
