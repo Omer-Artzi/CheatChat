@@ -39,7 +39,9 @@ public class HomeController : Controller
 
 
         // Redirect to a Chats page.
-        return RedirectToAction("Chats");
+        //return RedirectToAction("Chats");
+        return View("Chats", logInUser);
+
     }
 
     // GET: Home/ThankYou

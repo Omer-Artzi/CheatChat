@@ -1,23 +1,42 @@
-﻿<!DOCTYPE html>
+﻿@using CheatChat.Models
+@model UserModel
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/CSS/Chats.css">
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
     <title>WhatsApp Chat</title>
 </head>
+
 <body>
     <div class="chat-container">
         <div class="chat-header">
+            <param id="user" value="@Model.first_name" name="üser" />
+
             <h2>Chat with Friend</h2>
         </div>
-        <div class="chat-messages">
+        @* <hr />*@
+        <div class="chat-messages" id="chat-messages">
+            @*<ul @foreach (string message in )*@
+            <ul id="chat-messages"></ul>
             <!-- Messages will go here -->
         </div>
         <div class="chat-input">
-            <textarea placeholder="Type your message..."></textarea>
-            <button>Send</button>
+
+            @*<input type="text" id="user" value="@Model.first_name" contenteditable="false"/>*@
+            <input type="text" id="message" placeholder="Type your message">
+            @*<textarea placeholder="Type your message..." id="message"></textarea>*@
+            <button class="chat-input button" onclick="sendMessage()">Send</button>
+            <button class="return-button" onclick="logout()">Log out</button>
         </div>
+
+
     </div>
 </body>
+
 </html>

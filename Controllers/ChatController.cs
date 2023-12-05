@@ -16,6 +16,14 @@ namespace CheatChat.Controllers
         {
             return View();
         }
+        //return to home page:
+        [Route("Home")]
+        public IActionResult ReturnBack(string user)
+        {
+            //return View("Home", user);
+            return View("Index");
+            //return RedirectToActionResult("Home");
+        }
     }
 }
 
