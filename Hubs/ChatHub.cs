@@ -12,12 +12,12 @@ public class ChatHub : Hub
         // Broadcast the message to all clients
         await Clients.All.SendAsync("ReceiveMessage", user, message);
     }
-    // public async Task ReturnBack(string user)
-    // {
-    //    // Send a message to the client to navigate back to the home view
-    //     await Clients.All.SendAsync("NavigateHome", user);
-    //     //change to  the current user only
-    // }
+    public async Task logout()
+    {
+       // Send a message to the client to navigate back to the home view
+        await Clients.Caller.SendAsync("NavigateHome");
+        //change to  the current user only
+    }
 
 
 
