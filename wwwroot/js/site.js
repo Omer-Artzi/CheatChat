@@ -1,5 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
+﻿function loading() {  
+     // Show the loading spinner
+    //TODO:Make loading visible after click.
+    document.getElementById("loading").style.visibility = 'visible';
+    console.log("Loading");
+    
+}
+//Show error message when no such user
+function errorNoSuchUser{
+    //TODO: Make label visible when error returns.
+    document.getElementById("NoSuchUserError").style.visibility = 'visible';
+}

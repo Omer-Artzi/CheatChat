@@ -1,8 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
+﻿
 "use strict";
 
 // Create a connection to the SignalR hub
@@ -24,7 +20,9 @@ connection.on("ReceiveMessage", (user, message) => {
     // Update the UI with the new message
     const chatMessages = document.getElementById("chat-messages");
     const newMessage = document.createElement("p");
-    newMessage.textContent = `${user}: ${message}`;
+    //TODO: use proper names("You" for current user and names for the rest)
+    //TODO: list should have current user messages to the right and the rest to the left
+    newMessage.textContent = `You:\n ${message}`;
     chatMessages.appendChild(newMessage);
 });
 
@@ -33,6 +31,10 @@ connection.on("ReceiveMessage", (user, message) => {
 function sendMessage() {
     const user = document.getElementById("user").value;
     const message = document.getElementById("message").value;
+    //Check if message is empty
+    if (message === null || message.length === 0) {
+        return;
+    }
 
     // Send the message to the server
     connection.invoke("SendMessage", user, message).catch((err) => {
@@ -50,7 +52,7 @@ function logout() {
 }
 
 connection.on("NavigateHome", function () {
-    print("NavigateHome");
     // Navigate to the home view
     window.location.href = "/";///Views/Home/Index";
 });
+

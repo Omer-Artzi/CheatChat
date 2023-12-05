@@ -14,9 +14,9 @@ public class DatabaseHelper
 
     public MySqlConnection GetConnection()
     {
-        string? server = configuration["mysqlConnection:server"];
+        string? server   = configuration["mysqlConnection:server"];
         string? database = configuration["mysqlConnection:database"];
-        string? user = configuration["mysqlConnection:user"];
+        string? user     = configuration["mysqlConnection:user"];
         string? password = configuration["mysqlConnection:password"];
 
         string connectionString = $"Server={server};Database={database};User Id={user};Password={password};";
@@ -37,7 +37,8 @@ public class DatabaseHelper
             Regex regex = new Regex(pattern);
 
             // Use the Regex.IsMatch method to check if the email matches the pattern
-             if(!regex.IsMatch(email))
+            //TODO: Exchange admin to a more secure option
+             if(!regex.IsMatch(email) && !email.Equals("admin"))
             {
                 return null;
             }

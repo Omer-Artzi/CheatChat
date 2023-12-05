@@ -36,8 +36,6 @@ public class HomeController : Controller
         {
             return RedirectToAction("errorNoSuchUser");
         }    
-
-
         // Redirect to a Chats page.
         //return RedirectToAction("Chats");
         return View("Chats", logInUser);
@@ -54,5 +52,3 @@ public class HomeController : Controller
         return View();
     }
 }
-
-

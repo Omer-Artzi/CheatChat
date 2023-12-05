@@ -33,13 +33,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "dotnetRunMessages": "true",
-      "mysqlConnection": {
-        "server": "localhost:3306",
-        "database": "CheatChat",
-        "user": "root",
-        "password": "123456"
-      }
+      "dotnetRunMessages": true
     }
   }
 }

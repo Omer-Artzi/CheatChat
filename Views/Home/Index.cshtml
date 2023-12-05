@@ -7,6 +7,7 @@
 <head>
     <title>CheatChat - Log In</title>
     <link rel="stylesheet" href="~/css/LogIn.css">
+    <script src="~/js/site.js"></script>
 </head>
 <body style="background-image: url(images/LogInBackground.jpg)">
     <div class="container">
@@ -17,10 +18,12 @@
             <input type="text" id="email" name="email" required />
             <br />
             <label for="password">Password:</label>
-            <input type="text" id="password" name="password" required />
+            <input type="password" id="password" name="password" required />
             <br />
-            <input type="submit" value="Log In" style="font-size: 20px" />
-            }
+            <input type="submit" id="login" value="Log In" style="font-size: 20px" onclick="loading()" />
+        }
+    <label style="color:red; padding-top: 20px; text-align:center; visibility:hidden">Incorrect Email or password</label>
+    <div class="lds-ellipsis" id="loading"><div></div><div></div><div></div><div></div><div></div></div>
     </div>
 </body>
 </html>
