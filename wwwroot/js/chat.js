@@ -41,16 +41,16 @@ function sendMessage() {
 }
 //public bool isConnected => connection.State == connection.Connected;
 
-function returnBack() {
-    const user = document.getElementById("user").value;
-    //need to invoke the server method on Hub to return back to the home page
-    connection.invoke("ReturnBack",user).catch((err) => {
-        console.error(err.toString());
-    });
-}
+// function returnBack() {
+//     const user = document.getElementById("user").value;
+//     //need to invoke the server method on Hub to return back to the home page
+//     connection.invoke("ReturnBack",user).catch((err) => {
+//         console.error(err.toString());
+//     });
+// }
 
-connection.on("NavigateHome", function (user) {
-    print("NavigateHome");
-    // Navigate to the home view
-    window.location.href = "/";///Views/Home/Index";
-});
+// connection.on("NavigateHome", function (user) {
+//     print("NavigateHome");
+//     // Navigate to the home view
+//     window.location.href = "/";///Views/Home/Index";
+// });
