@@ -1,19 +1,20 @@
 ﻿body {
+    background-color: #95e9e6;
     margin: 0;
-    padding: 0;
+    padding: 10;
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
 }
 
 .chat-container {
     max-width: 600px;
     margin: 50px auto;
-    border: 1px solid #ccc;
+    border: 2px solid #fff;
     border-radius: 8px;
     overflow: hidden;
 }
 
 .chat-header {
-    background-color: #4caf50;
+    background-color: #12786c;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -30,13 +31,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-top: 1px solid #ccc;
+    border: 1px solid #fff;
 }
 
     .chat-input textarea {
         width: 80%;
         padding: 8px;
-        border: 1px solid #ccc;
+        border: 1px solid #fff;
         border-radius: 4px;
         resize: none;
     }
@@ -44,9 +45,20 @@
     .chat-input button {
         width: 18%;
         padding: 8px;
-        background-color: #4caf50;
+        background-color: #12786c;
         color: #fff;
-        border: none;
+        border: 1px solid #fff;
         border-radius: 4px;
         cursor: pointer;
     }
+
+.return-button {
+    width: 10%;
+    padding: 4px;
+    background-color: #12786c;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}

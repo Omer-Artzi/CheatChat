@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
 namespace SignalRChatMVC.Hubs;
@@ -6,10 +8,17 @@ namespace SignalRChatMVC.Hubs;
 public class ChatHub : Hub
 {
     public async Task SendMessage(string user, string message)
-    //public async Task SendMessage(string message)
     {
         // Broadcast the message to all clients
         await Clients.All.SendAsync("ReceiveMessage", user, message);
-        //await Clients.All.SendAsync("ReceiveMessage", message);
     }
+    //public async Task ReturnBack(string user)
+    //{
+    //    //return to home page by calling chat controller method:
+    //    //invoke("ReceiveMessage", user);
+    //}
+
+
+
+
 }

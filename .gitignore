@@ -14,3 +14,11 @@ obj/Debug/net7.0/CheatChat.GeneratedMSBuildEditorConfig.editorconfig
 *.dll
 *.pdb
 *.props
+obj/CheatChat.csproj.nuget.dgspec.json
+obj/CheatChat.csproj.nuget.g.props
+obj/CheatChat.csproj.nuget.g.targets
+obj/Debug/net7.0/CheatChat.assets.cache
+obj/Debug/net7.0/CheatChat.csproj.FileListAbsolute.txt
+obj/project.assets.json
+obj/project.nuget.cache
+appsettings.json
