@@ -14,7 +14,7 @@ public class HomeController : Controller
         _logger = logger;
         this.databaseHelper = databaseHelper;
     }
-
+    [HttpGet]
     public IActionResult Index()
     {
         return View();
@@ -24,10 +24,13 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-   
-
-    // POST: Home/LogIn
-    [HttpPost]
+    [HttpGet]
+    public IActionResult RegisterSwitch()
+    {
+        return View("Register");
+    }
+    // GET: Home/LogIn
+    [HttpGet]
     public ActionResult logIn(string email,string password)
     {
         //Check if user exists
@@ -41,6 +44,7 @@ public class HomeController : Controller
         return View("Chats", logInUser);
 
     }
+
 
     // GET: Home/ThankYou
     public ActionResult Chats()

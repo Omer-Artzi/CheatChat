@@ -16,7 +16,6 @@ public class ChatHub : Hub
     {
        // Send a message to the client to navigate back to the home view
         await Clients.Caller.SendAsync("NavigateHome");
-        //change to  the current user only
     }
 
 

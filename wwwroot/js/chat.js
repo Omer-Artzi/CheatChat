@@ -27,6 +27,7 @@ connection.on("ReceiveMessage", (user, message) => {
 });
 
 
+
 // Handle sending messages from browser to server Hub
 function sendMessage() {
     const user = document.getElementById("user").value;

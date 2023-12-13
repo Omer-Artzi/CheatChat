@@ -1,4 +1,6 @@
-﻿using SignalRChatMVC.Hubs;
+﻿using CheatChat.Models;
+using Microsoft.EntityFrameworkCore;
+using SignalRChatMVC.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<DatabaseHelper>();
 builder.Services.AddSignalR();
 
+// builder.Services.AddDbContext<AppDbContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

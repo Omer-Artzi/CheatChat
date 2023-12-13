@@ -12,7 +12,7 @@
 <body style="background-image: url(images/LogInBackground.jpg)">
     <div class="container">
         <img src="~/images/CheatChatLogo.png" alt="Logo" class="logo">
-        @using (Html.BeginForm("logIn", "Home", FormMethod.Post))
+        @using (Html.BeginForm("logIn", "Home", FormMethod.Get))
         {
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" required />
@@ -21,6 +21,8 @@
             <input type="password" id="password" name="password" required />
             <br />
             <input type="submit" id="login" value="Log In" style="font-size: 20px" onclick="loading()" />
+            @* <button type="submit" id="sign up" value="sign up" style="font-size: 20px" onclick="signUp()" /> *@
+            <a asp-controller="Home" asp-action="RegisterSwitch" style="font-size: 20px">Register</a>
         }
     <label style="color:red; padding-top: 20px; text-align:center; visibility:hidden">Incorrect Email or password</label>
     <div class="lds-ellipsis" id="loading"><div></div><div></div><div></div><div></div><div></div></div>

@@ -6,7 +6,14 @@
     
 }
 //Show error message when no such user
-function errorNoSuchUser{
+function errorNoSuchUser(){
     //TODO: Make label visible when error returns.
     document.getElementById("NoSuchUserError").style.visibility = 'visible';
 }
+
+
+// addEventListener("click", loading);
+// addEventListener("click", sendMessage);
+// addEventListener("click", logout);
+// addEventListener("click", errorNoSuchUser);
+
